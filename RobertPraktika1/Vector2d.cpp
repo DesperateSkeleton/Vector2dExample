@@ -34,22 +34,25 @@ void Vector2d::print()
 	cout << "x = " << x << " y = " << y << endl;
 }
 
-void Vector2d::sum(Vector2d Vector)
+Vector2d Vector2d::sum(Vector2d Vector)
 {
 	x = x + Vector.x;
 	y = y + Vector.y;
+	return Vector2d(x, y);
 }
 
-void Vector2d::sub(Vector2d Vector)
+Vector2d Vector2d::sub(Vector2d Vector)
 {
 	x = x - Vector.x;
 	y = y - Vector.y;
+	return Vector2d(x, y);
 }
 
-void Vector2d::mult(double Value)
+Vector2d Vector2d::mult(double Value)
 {
 	x = x * Value;
 	y = y * Value;
+	return Vector2d(x, y);
 }
 
 double Vector2d::scalarMult(Vector2d Vector)
